@@ -1,13 +1,14 @@
+// src/services/api.js
 const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:3001").replace(/\/+$/, '');
 
 export const fetchWithAuth = async (url, options = {}) => {
   const token = localStorage.getItem('fitbox_token');
-
+  
   const headers = {
     'Content-Type': 'application/json',
     ...options.headers,
   };
-
+  
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
   }
@@ -37,5 +38,3 @@ export const isTokenValid = () => {
   const token = localStorage.getItem('fitbox_token');
   return !!token;
 };
-
-export { API_URL };
