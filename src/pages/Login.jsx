@@ -1,8 +1,7 @@
-// src/pages/Login.jsx
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdCard, faUser, faSpinner, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { fetchWithAuth } from '../services/api';
+import { API_URL } from '../services/api';  // Importar la URL
 
 const Login = ({ setIsAuthenticated }) => {
   const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -15,11 +14,12 @@ const Login = ({ setIsAuthenticated }) => {
     setError('');
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch(`${API_URL}/api/login`, {  // Usar API_URL
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
       });
+
       const data = await response.json();
 
       if (response.ok) {
@@ -29,6 +29,7 @@ const Login = ({ setIsAuthenticated }) => {
         setError(data.error || 'Error de autenticación');
       }
     } catch (err) {
+      console.error('Login error:', err);
       setError('Error de conexión con el servidor');
     } finally {
       setIsSubmitting(false);
