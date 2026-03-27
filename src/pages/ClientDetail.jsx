@@ -80,7 +80,7 @@ const ClientDetail = () => {
             <button onClick={() => navigate(-1)} className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/15 rounded-full text-text-secondary hover:bg-white/15 hover:text-white transition-all">
               <FontAwesomeIcon icon={faArrowLeft} /> Volver
             </button>
-            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white flex items-center gap-2">
               <FontAwesomeIcon icon={faUser} className="text-secondary" />
               {client.nombre} {client.apellido}
             </h2>
@@ -93,10 +93,10 @@ const ClientDetail = () => {
             <div className="space-y-8">
               {/* Información personal */}
               <div className="bg-white/5 border border-gold/10 rounded-xl p-5">
-                <h3 className="text-xl font-bold text-white flex items-center gap-2 pb-3 border-b border-gold/10 mb-4">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white flex items-center gap-2 pb-3 border-b border-gold/10 mb-4">
                   <FontAwesomeIcon icon={faIdCard} /> Información Personal
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-text-primary font-semibold">DNI:</label>
                     <p className="text-text-secondary break-words">{client.DNI}</p>
@@ -120,7 +120,7 @@ const ClientDetail = () => {
 
               {/* Historial de pagos */}
               <div className="bg-white/5 border border-gold/10 rounded-xl p-5">
-                <h3 className="text-xl font-bold text-white flex items-center gap-2 pb-3 border-b border-gold/10 mb-4">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white flex items-center gap-2 pb-3 border-b border-gold/10 mb-4">
                   <FontAwesomeIcon icon={faMoneyBillWave} /> Historial de Pagos
                 </h3>
                 {payments.length === 0 ? (

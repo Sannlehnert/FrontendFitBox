@@ -70,7 +70,7 @@ const RegisterClient = () => {
             <button onClick={() => navigate(-1)} className="btn-back flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/15 rounded-full text-text-secondary hover:bg-white/15 hover:text-white transition-all">
               <FontAwesomeIcon icon={faArrowLeft} /> Volver
             </button>
-            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white flex items-center gap-2">
               <FontAwesomeIcon icon={faUserPlus} className="text-secondary" />
               Registrar Nuevo Cliente
             </h2>
@@ -84,7 +84,7 @@ const RegisterClient = () => {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="flex items-center gap-2 text-white font-semibold mb-2">
                     <FontAwesomeIcon icon={faUser} /> Nombre: *

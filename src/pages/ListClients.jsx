@@ -80,7 +80,7 @@ const ListClients = () => {
         <div className="bg-gradient-card backdrop-blur border border-gold/10 rounded-xl shadow-lg">
           <div className="p-5 border-b border-gold/10">
             <div className="flex flex-wrap items-center justify-between gap-4">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white flex items-center gap-2">
                 <FontAwesomeIcon icon={faUsers} className="text-secondary" />
                 Lista de Clientes
               </h2>
@@ -125,7 +125,7 @@ const ListClients = () => {
                 )}
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                 {filteredClients.map(client => (
                   <div key={client.id_persona} className="bg-gradient-card border border-gold/10 rounded-xl p-5 hover:-translate-y-1 hover:shadow-lg transition-all">
                     <div className="flex justify-between items-start mb-3">

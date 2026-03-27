@@ -50,7 +50,7 @@ const SearchClient = () => {
             <button onClick={() => navigate(-1)} className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/15 rounded-full text-text-secondary hover:bg-white/15 hover:text-white transition-all">
               <FontAwesomeIcon icon={faArrowLeft} /> Volver
             </button>
-            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white flex items-center gap-2">
               <FontAwesomeIcon icon={faSearch} className="text-secondary" />
               Buscar Cliente
             </h2>
@@ -99,8 +99,8 @@ const SearchClient = () => {
               </div>
             ) : results.length > 0 ? (
               <div>
-                <h3 className="text-xl font-bold text-white mb-4">Resultados de la búsqueda</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-4">Resultados de la búsqueda</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {results.map(client => (
                     <div key={client.id_persona} className="bg-gradient-card border border-gold/10 rounded-xl p-5 hover:-translate-y-1 hover:shadow-lg transition-all">
                       <h3 className="text-lg font-bold text-white mb-2">{client.nombre_completo}</h3>
