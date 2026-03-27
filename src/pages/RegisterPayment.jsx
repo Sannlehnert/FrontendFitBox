@@ -11,7 +11,7 @@ const RegisterPayment = () => {
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({
     id_persona: '',
-    monto_total: '55000',
+    monto_total: '70000',
     fecha_pago: new Date().toISOString().split('T')[0],
     metodo_pago: 'efectivo',
     pagos_parciales: []
@@ -305,7 +305,6 @@ const RegisterPayment = () => {
                   >
                     <option value="efectivo">Efectivo</option>
                     <option value="transferencia">Transferencia</option>
-                    <option value="tarjeta">Tarjeta</option>
                   </select>
                 </div>
               )}
